@@ -1,0 +1,138 @@
+//
+//  PrefixHeader.pch
+//  Tomaintain
+//
+//  Created by 李沛 on 15/8/5.
+//  Copyright (c) 2015年 iOS. All rights reserved.
+//
+#import "UIViewController+LetfBarButton.h"
+#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
+#import "UIAlertView+AlertSecond.h"
+#import "UIAlertController+Login.h"
+#import "MJRefresh.h"
+#import "UIViewController+LoadFailed.h"
+#import "UITableView+LoadFailed.h"
+#import "UIAlertView+AlertSecond.h"
+//#import "UIView+Frame.h"
+#import "AFNetworking.h"
+#import "LoginViewController.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+#ifndef Tomaintain_PrefixHeader_pch
+#define Tomaintain_PrefixHeader_pch
+
+
+
+//接口地址
+//#define QBYURL @"http://192.168.0.4:8080/merchant/api"
+#define QBYURL @"http://www.qubaoyang.com.cn:81/merchant/api"
+
+//登陆接口
+#define loginStr QBYURL@"/account/login"
+
+//主页数据统计
+#define mainPage QBYURL@"/account/orderCount"
+
+//核销查询接口
+#define verification QBYURL@"/order/checkCode"
+
+//确认核销接口
+#define cancelOrder QBYURL@"/order/cancelOrder"
+
+//今日特惠列表接口
+#define todaySale QBYURL@"/product/saleList"
+
+//预约管理列表接口
+#define historyOrder QBYURL@"/order/historyOrder"
+//消息列表接口
+#define messageList QBYURL@"/message/messageList"
+//消息详情接口
+#define messageDetail QBYURL@"/message/detail"
+//评论管理列表接口
+#define commentList QBYURL@"/feedback/feedbackList"
+//会员管理列表接口
+#define memberManageList QBYURL@"/user/userList"
+//会员管理详情页接口
+#define memberManageDetail QBYURL@"/user/userDetail"
+//保养记录列表接口
+#define maintainList QBYURL@"/account/maintainList"
+//保养记录详情接口
+#define maintainDetail QBYURL@"/account/maintainDetail"
+//采购列表接口
+#define productList QBYURL@"/product/productList"
+//采购分类接口
+#define classifyList QBYURL@"/product/catelogList"
+//购物车列表接口
+#define cartList QBYURL@"/cart/cartList"
+//添加购物车接口
+#define addProduct QBYURL@"/cart/editCart"
+//添加购物车接口（添加一个）
+#define add1Product QBYURL@"/cart/addProduct"
+//删除购物车商品接口
+#define removeProduct QBYURL@"/cart/delCart"
+//购物车商品数量统计接口
+#define cartCount QBYURL@"/cart/cartCount"
+//表统计接口
+#define orderStat QBYURL@"/order/orderStat"
+//收货地址列表接口
+#define addressList QBYURL@"/address/addressList"
+//设置默认收货地址
+#define setDefault QBYURL@"/address/setDefault"
+//收货地址编辑页
+#define addressEdit QBYURL@"/address/addressDetail"
+//添加编辑收货地址
+#define addAddress QBYURL@"/address/addAddress"
+//地址选择接口
+#define regionList QBYURL@"/address/regionList"
+//删除收货地址接口
+#define delAddress QBYURL@"/address/delAddress"
+//意见反馈
+#define ticklingURL @"http://www.qubaoyang.com.cn:81/qubaoyang/api/account/feedback"
+//采购订单列表
+#define orderList QBYURL@"/order/list"
+//取消采购订单
+#define quitOrder QBYURL@"/order/cancel"
+//提交订单
+#define submitOrder QBYURL@"/order/submitOrder"
+//获取默认收货地址
+#define defaultAddress QBYURL@"/address/defaultAddress"
+//获取默认收货地址
+#define submitOrder QBYURL@"/order/submitOrder"
+//支付
+#define payment QBYURL@"/order/payment"
+
+#define WLANYES @"wlanYes"
+#define WLANNO @"wlanNo"
+#define StationSelect @"stationSelect"
+ 
+#define RGColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+#define CharacterColor1 RGColor(102, 102, 102)
+#define CharacterColor2 RGColor(153, 153, 153)
+#define MainPurpleColor RGColor(69, 33, 115)
+
+//接口
+
+#ifndef __OPTIMIZE__
+# define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...) {}
+#endif
+
+
+
+
+//屏幕适配
+#define SCREEN [UIScreen mainScreen].bounds.size
+#define BAR_HEIGHT self.navigationController.navigationBar.frame.size.height
+#endif
+
+
+
+
+
